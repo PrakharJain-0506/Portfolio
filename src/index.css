@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Space Grotesk', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #131315;
+    color: #e5e1e4;
+    overflow-x: hidden;
+  }
+
+  section {
+    scroll-margin-top: 76px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-dash-slow {
+  animation: dash 9s linear infinite;
+}
+
+.animate-dash-med {
+  animation: dash 6s linear infinite;
+}
+
+.animate-dash-reverse {
+  animation: dash 7s linear infinite reverse;
+}
+
+.telemetry-svg * {
+  vector-effect: non-scaling-stroke;
+}
+
+/* 3D Carousel Stage & Cards */
+.car-stage {
+  height: 440px;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  touch-action: pan-y;
+  cursor: grab;
+  overflow: hidden;
+  user-select: none;
+}
+
+.car-stage.dragging {
+  cursor: grabbing;
+}
+
+.car-3d {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 260px;
+  height: 380px;
+}
+
+@media (min-width: 1024px) {
+  .car-stage {
+    height: 560px;
+  }
+  .car-3d {
+    width: 340px;
+    height: 460px;
+  }
+}
+
+.car-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background: #1c1b1e;
+  border: 1px solid rgba(244, 244, 246, 0.08);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.35s ease, opacity 0.25s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.car-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244, 244, 246, 0.35), transparent);
+  transition: opacity 0.3s ease;
+}
+
+/* Ethereal fuzzy edge highlight on hover */
+.car-card:hover {
+  opacity: 1 !important;
+  z-index: 20;
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset 0 0 16px rgba(255, 255, 255, 0.06),
+    0 0 16px 2px rgba(255, 255, 255, 0.5),
+    0 0 32px 8px rgba(255, 255, 255, 0.25),
+    0 0 54px 16px rgba(255, 255, 255, 0.12),
+    0 24px 48px -12px rgba(0, 0, 0, 0.95);
+  transform: scale(1.02);
+}
+
+/* Grid card fuzzy edge highlight */
+.project-card-glow {
+  transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.3s ease;
+}
+
+.project-card-glow:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset 0 0 16px rgba(255, 255, 255, 0.06),
+    0 0 16px 2px rgba(255, 255, 255, 0.5),
+    0 0 32px 8px rgba(255, 255, 255, 0.25),
+    0 0 54px 16px rgba(255, 255, 255, 0.12),
+    0 24px 48px -12px rgba(0, 0, 0, 0.95);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Custom scrollbars for modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #131315;
+}
+::-webkit-scrollbar-thumb {
+  background: #353437;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #454749;
+}
