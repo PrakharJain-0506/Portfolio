@@ -63,7 +63,6 @@ const PROJECTS: Project[] = [
     overview: "An artisan-focused digital platform that helps traditional Indian artisans build a stronger digital presence and present their crafts to potential buyers, combining technology with India's traditional crafts.",
     points: [
       'Digital identity for artisans: profiles covering craft, region, materials, techniques and cultural background',
-      'AI-assisted product information, storytelling and pricing suggestions',
       'Product cataloguing, discovery and better presentation of handmade products',
       'Preserves the cultural context behind crafts instead of treating them as generic e-commerce items',
       'Artisan and product data can be shared with the buyer-facing side'
@@ -90,6 +89,284 @@ const PROJECTS: Project[] = [
     tech: ['Supabase', 'Responsive UI', 'Modern Web'],
     chips: ['Web design', 'Concept', 'Cultural Heritage'],
     link: 'https://sandook.ai.studio/'
+  }
+];
+
+interface SchoolExperience {
+  id: string;
+  category: string;
+  title: string;
+  badge: string;
+  icon: string;
+  rolesOrEvents: string[];
+  summary: string;
+  responsibilities: string[];
+}
+
+interface NonTechSkillDetail {
+  id: string;
+  name: string;
+  category: 'Leadership' | 'Execution' | 'People' | 'Communication';
+  icon: string;
+  summary: string;
+  foundation: string;
+  whatItInvolves: string;
+  howDeveloped: string;
+  examples: string[];
+  practicalApplications: string[];
+}
+
+const SCHOOL_EXPERIENCES: SchoolExperience[] = [
+  {
+    id: 'school-leadership',
+    category: 'Student Governance & Representation',
+    title: 'School Leadership',
+    badge: 'STUDENT COUNCIL',
+    icon: 'military_tech',
+    rolesOrEvents: ['Class Prefect', 'House Captain', 'Literacy Captain'],
+    summary:
+      'Served across key student representative positions throughout schooling, taking early ownership of peer guidance, classroom decorum, and inter-house events.',
+    responsibilities: [
+      'Served as Class Prefect across academic sessions, managing classroom decorum, morning roll-calls, and daily student discipline.',
+      'Led as House Captain, guiding house contingents in inter-house sports, cultural contests, and assemblies.',
+      'Appointed Literacy Captain, organizing literary activities, morning assembly presentations, and encouraging peer participation.',
+      'Acted as a dependable, constructive communication bridge connecting faculty coordinators with student cohorts.'
+    ]
+  },
+  {
+    id: 'school-event-management',
+    category: 'Institutional Operations & Coordination',
+    title: 'School Event Management',
+    badge: 'EVENT OPERATIONS',
+    icon: 'event_available',
+    rolesOrEvents: ['Annual Functions', 'Felicitation Ceremonies', 'Inter-School Competitions'],
+    summary:
+      'Active operational involvement in planning, staging, and executing major school events, handling multi-team coordination and schedule management under live conditions.',
+    responsibilities: [
+      'Participated in organizing school Annual Functions, assisting with stage schedules, entry/exit transitions, and seating arrangements.',
+      'Assisted in conducting Felicitation Ceremonies, managing award rosters, certificate verifications, and on-stage trophy presentations.',
+      'Coordinated inter-school competitions, guiding visiting school contingents and managing logistics tables.',
+      'Directly communicated with teachers and student volunteers to maintain discipline, resolve sudden schedule adjustments, and ensure smooth delivery.'
+    ]
+  }
+];
+
+const NON_TECH_SKILLS: NonTechSkillDetail[] = [
+  {
+    id: 'leadership-initiative',
+    name: 'Leadership & Initiative',
+    category: 'Leadership',
+    icon: 'flag',
+    summary:
+      'Stepping forward to guide peers, take early ownership of team responsibilities, and lead by proactive example.',
+    foundation: 'Class Prefect • House Captain • Literacy Captain',
+    whatItInvolves:
+      'Leadership is the willingness to accept accountability for group direction, maintain decorum without relying on authoritarian control, and take the first step when a task needs direction.',
+    howDeveloped:
+      'Developed through successive student leadership appointments throughout school, serving as Class Prefect, House Captain, and Literacy Captain. Each role required guiding classmates, setting an example of discipline, and initiating house activities.',
+    examples: [
+      'Representing the class and house during morning assemblies, faculty meetings, and official school ceremonies',
+      'Taking initiative to organize and motivate house teams for inter-house competitions, debates, and cultural events',
+      'Encouraging participation among hesitant peers and ensuring balanced representation in school activities',
+      'Leading by personal example in punctuality, discipline, and commitment to assigned tasks'
+    ],
+    practicalApplications: [
+      'Taking ownership of technical project milestones and self-starting without constant supervision',
+      'Guiding peer discussions constructively during group engineering projects and hackathons',
+      'Maintaining proactive initiative when starting new tasks or learning unfamiliar technologies'
+    ]
+  },
+  {
+    id: 'event-coordination',
+    name: 'Event Coordination',
+    category: 'Execution',
+    icon: 'event_available',
+    summary:
+      'Planning logistics, managing venue flow, timing synchronization, and ensuring smooth stage execution during institutional events.',
+    foundation: 'Annual Functions • Felicitation Ceremonies • Inter-School Competitions',
+    whatItInvolves:
+      'Event coordination involves managing interdependent activities under fixed time constraints—aligning participants, stage schedules, equipment, and audience flow so that live programs run seamlessly.',
+    howDeveloped:
+      'Cultivated through direct participation in organizing major school events, including Annual Functions, Felicitation Ceremonies, and Inter-School meets. Worked alongside organizing teachers to coordinate stage transitions and student movement.',
+    examples: [
+      'Managing backstage student queues and timing stage entrances and exits during Annual Function performances',
+      'Assisting with felicitation ceremonies by verifying award rosters, certificates, and trophy handovers on stage',
+      'Coordinating visiting school contingents, registration desks, and event schedules for inter-school competitions',
+      'Liaising between stage managers, audio teams, and faculty coordinators to keep events running on schedule'
+    ],
+    practicalApplications: [
+      'Structuring multi-step project delivery pipelines and release timelines methodically',
+      'Coordinating team presentations, demos, and live technical walk-throughs with clear structure',
+      'Anticipating logistical requirements and dependencies before initiating team tasks'
+    ]
+  },
+  {
+    id: 'team-management',
+    name: 'Team Management',
+    category: 'People',
+    icon: 'groups',
+    summary:
+      'Coordinating student teams, distributing responsibilities clearly, and aligning diverse peers towards common objectives.',
+    foundation: 'House Contingents • Volunteer Committees',
+    whatItInvolves:
+      'Team management is the capacity to organize individual contributors, communicate expectations clearly, resolve interpersonal bottlenecks, and maintain collective momentum toward a shared milestone.',
+    howDeveloped:
+      'Honed while coordinating house contingents and student volunteer groups during school competitions, cultural festivals, and sports meets. Learned how to delegate responsibilities respectfully and keep members engaged.',
+    examples: [
+      'Coordinating groups of students to prepare house exhibition boards, stage decorations, and literary presentations',
+      'Distributing specific event day duties (ushering, stage assistance, registration) to student volunteers',
+      'Ensuring every team member understood their role and timing during school activities',
+      'Maintaining team enthusiasm and collective focus even during long rehearsal sessions'
+    ],
+    practicalApplications: [
+      'Breaking complex project deliverables into clear, manageable assignments for team members',
+      'Checking in with collaborators to remove friction and support progress without micromanaging',
+      'Aligning varied technical strengths in hackathon teams toward a cohesive product demo'
+    ]
+  },
+  {
+    id: 'communication-skills',
+    name: 'Communication Skills',
+    category: 'Communication',
+    icon: 'record_voice_over',
+    summary:
+      'Articulating instructions clearly, listening attentively, and serving as a dependable bridge between teachers and students.',
+    foundation: 'Teacher-Student Liaison • Assembly Presentations',
+    whatItInvolves:
+      'Effective communication is the ability to convey essential information clearly, adapt tone appropriately for different audiences (faculty versus peers), and listen actively to prevent misunderstandings.',
+    howDeveloped:
+      'Developed by serving as the primary liaison between faculty teachers and large cohorts of students as Prefect and House Captain, as well as conducting announcements and literary presentations.',
+    examples: [
+      'Translating teacher instructions, guidelines, and event schedules to classmates accurately and promptly',
+      'Communicating student concerns, logistical needs, and suggestions back to teachers respectfully',
+      'Delivering clear announcements during school assemblies and briefing participant groups before competitions',
+      'Coordinating with fellow prefects through concise, timely updates during live school ceremonies'
+    ],
+    practicalApplications: [
+      'Documenting project specifications, API architectures, and technical decisions clearly',
+      'Presenting project demos with clarity, avoiding unnecessary jargon for non-technical stakeholders',
+      'Communicating blockers, pull request updates, and status clearly within distributed teams'
+    ]
+  },
+  {
+    id: 'time-management',
+    name: 'Time Management',
+    category: 'Execution',
+    icon: 'schedule',
+    summary:
+      'Balancing academic priorities alongside event preparations, leadership responsibilities, and operational deadlines.',
+    foundation: 'Leadership Duties alongside School Academics',
+    whatItInvolves:
+      'Time management requires prioritizing critical tasks, setting structured boundaries, and executing commitments punctually without sacrificing quality or academic focus.',
+    howDeveloped:
+      'Formed by continuously balancing the demands of school leadership (prefect duties, house meetings, event rehearsals) with daily academics, homework, and exam preparation.',
+    examples: [
+      'Scheduling event preparation and rehearsal blocks during designated free periods and after-school hours',
+      'Monitoring stage runtime during annual functions and inter-school fixtures to avoid overall ceremony delays',
+      'Planning personal study routines in advance to stay on top of academics during busy event weeks',
+      'Ensuring event materials, banners, and lists were finalized well before scheduled delivery deadlines'
+    ],
+    practicalApplications: [
+      'Managing feature sprint timelines and prioritizing core functionality over secondary distractions',
+      'Delivering hackathon builds within strict 24-48 hour constraints without burning out',
+      'Balancing ongoing university engineering coursework with open-source project exploration'
+    ]
+  },
+  {
+    id: 'teamwork-collaboration',
+    name: 'Teamwork & Collaboration',
+    category: 'People',
+    icon: 'handshake',
+    summary:
+      'Working harmoniously alongside fellow students, supporting collective event execution, and prioritizing shared team success.',
+    foundation: 'Student Council • Inter-House Collaborative Efforts',
+    whatItInvolves:
+      'Collaboration is the ability to operate as a reliable, humble teammate—offering help where needed, respecting different perspectives, and valuing collective success over individual credit.',
+    howDeveloped:
+      'Nurtured through countless hours working alongside fellow prefects, house captains, and student organizing committees to ensure school events succeeded collectively.',
+    examples: [
+      'Working closely with peer house captains to coordinate inter-house fixtures fairly and smoothly',
+      'Stepping in willingly to assist other teams with backstage arrangements, prop movements, or ushering',
+      'Supporting committee decisions constructively and maintaining a friendly, cooperative working environment',
+      'Coordinating with students from different grades to build unified performances and presentations'
+    ],
+    practicalApplications: [
+      'Collaborating effectively on shared Git repositories with clean branch management and polite code reviews',
+      'Supporting fellow developers with debugging or UI polish whenever colleagues face hurdles',
+      'Fostering an open, positive atmosphere in engineering teams where all ideas are respected'
+    ]
+  },
+  {
+    id: 'problem-solving',
+    name: 'Problem-Solving',
+    category: 'Execution',
+    icon: 'psychology',
+    summary:
+      'Adapting calmly to changing situations, thinking on your feet, and resolving on-ground organizational challenges during events.',
+    foundation: 'Live Event Contingencies & Schedule Adjustments',
+    whatItInvolves:
+      'Practical problem-solving is the ability to assess unexpected obstacles without panicking, identify workable alternatives quickly, and take calm decisive action on the spot.',
+    howDeveloped:
+      'Tested during live school events where unexpected occurrences—such as participant absences, delays in guest arrivals, or missing stage props—required immediate, sensible adjustments.',
+    examples: [
+      'Rearranging stage order and sequence smoothly when a performer or speaker experienced a delay',
+      'Resolving sudden logistical shortages (e.g., seating, certificates, audio-visual adjustments) during live functions',
+      'Managing classroom disputes or minor student tensions calmly and fairly as Class Prefect',
+      'Remaining composed under pressure so that the audience and guests experienced an uninterrupted program'
+    ],
+    practicalApplications: [
+      'Troubleshooting complex technical bugs methodically under time-critical deployment conditions',
+      'Refactoring application architecture calmly when edge cases or performance bottlenecks arise',
+      'Maintaining composure and structured thinking during high-pressure coding competitions'
+    ]
+  },
+  {
+    id: 'organizational-skills',
+    name: 'Organizational Skills',
+    category: 'Execution',
+    icon: 'inventory_2',
+    summary:
+      'Managing event arrangements systematically, maintaining rosters and schedules, and keeping operational environments orderly.',
+    foundation: 'Award Rosters • Inter-School Registrations • Rehearsals',
+    whatItInvolves:
+      'Organizational competence involves structuring chaos into order—maintaining reliable records, categorizing resources neatly, and creating systems that prevent oversights.',
+    howDeveloped:
+      'Acquired through assisting teachers in managing event logistics, maintaining ceremony rosters, organizing awards, and scheduling participants for school functions.',
+    examples: [
+      'Preparing, checking, and sequencing award certificates and trophies for felicitation ceremonies',
+      'Maintaining systematic registration sheets and participant rosters during inter-school competitions',
+      'Organizing props, badges, and backstage materials methodically for quick access during performances',
+      'Keeping daily classroom records, notices, and schedules organized as Class Prefect'
+    ],
+    practicalApplications: [
+      'Maintaining well-organized codebase architecture, clean directory structures, and clear READMEs',
+      'Structuring project task boards, issue trackers, and dependency documentation systematically',
+      'Designing clean, maintainable database schemas and component folder structures'
+    ]
+  },
+  {
+    id: 'responsibility-adaptability',
+    name: 'Responsibility & Adaptability',
+    category: 'Leadership',
+    icon: 'verified_user',
+    summary:
+      'Owning duties fully, upholding institutional discipline, and adapting quickly to diverse roles and unexpected responsibilities.',
+    foundation: 'Prefectural Duties • Transition across Captaincies',
+    whatItInvolves:
+      'Responsibility is the commitment to stand by one’s obligations through to completion, while adaptability is the agility to adjust smoothly when responsibilities or circumstances change.',
+    howDeveloped:
+      'Instilled through years of holding positions of trust in school—from Class Prefect to House Captain and Literacy Captain—where teachers, school heads, and classmates relied on my consistency.',
+    examples: [
+      'Consistently upholding school discipline and standards during morning assemblies, corridors, and functions',
+      'Adapting smoothly between distinct leadership roles with different focuses (discipline, sports/house activities, literacy)',
+      'Taking full accountability for assigned duties during events and seeing them through from setup to teardown',
+      'Maintaining personal integrity, dependability, and willingness to learn whenever new tasks were assigned'
+    ],
+    practicalApplications: [
+      'Taking full ownership of code quality, test coverage, and product reliability in software projects',
+      'Adapting rapidly to modern tech stacks, new frameworks, and evolving project requirements',
+      'Being a reliable, trustworthy teammate who follows through on commitments without prompting'
+    ]
   }
 ];
 
@@ -231,11 +508,30 @@ function CursorMotion() {
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedSkillModal, setSelectedSkillModal] = useState<NonTechSkillDetail | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [viewMode, setViewMode] = useState<'3d' | 'grid'>('3d');
   const [activeSection, setActiveSection] = useState('hero');
   const [cppOutputVisible, setCppOutputVisible] = useState(false);
   const [autoRotate, setAutoRotate] = useState(true);
+  const [selectedSkillCategory, setSelectedSkillCategory] = useState<string>('all');
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return !/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  });
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(!/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  const directMailHref = isDesktop
+    ? `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT.email}`
+    : `mailto:${CONTACT.email}`;
 
   // 3D Carousel Refs and State
   const stageRef = useRef<HTMLDivElement>(null);
@@ -279,6 +575,7 @@ export default function App() {
       { id: 'about', element: document.getElementById('about') },
       { id: 'work', element: document.getElementById('work') },
       { id: 'skills', element: document.getElementById('skills') },
+      { id: 'beyond', element: document.getElementById('beyond') },
       { id: 'contact', element: document.getElementById('contact') }
     ];
 
@@ -298,11 +595,12 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close modal on Escape
+  // Close modals on Escape
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setSelectedProject(null);
+        setSelectedSkillModal(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -492,6 +790,12 @@ export default function App() {
               Skills
             </a>
             <a
+              href="#beyond"
+              className={`transition-colors py-1 ${activeSection === 'beyond' ? 'text-white border-b border-white' : 'text-[#c5c7c9] hover:text-white'}`}
+            >
+              Beyond Tech
+            </a>
+            <a
               href="#contact"
               className={`transition-colors py-1 ${activeSection === 'contact' ? 'text-white border-b border-white' : 'text-[#c5c7c9] hover:text-white'}`}
             >
@@ -627,30 +931,13 @@ export default function App() {
         {/* ======================================================= */}
         {/* SECTION 1: HERO VIEWPORT */}
         {/* ======================================================= */}
-        <section id="hero" className="flex flex-col pt-8 sm:pt-14 pb-16 sm:pb-24 w-full">
-          {/* Telemetry Coordinate Track */}
-          <div className="flex items-center justify-between w-full pb-6 text-[#c5c7c9] border-b border-white/[0.05]">
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span className="font-mono text-[11px] sm:text-xs text-white tracking-widest uppercase">
-                LOC // DELHI NCR, INDIA
-              </span>
-            </div>
-            <div className="font-mono text-[11px] sm:text-xs text-[#8f9194] tracking-widest flex items-center gap-2">
-              <span className="hidden sm:inline">SYS // ACTIVE</span>
-              <span>28.6139° N, 77.2090° E</span>
-            </div>
-          </div>
-
+        <section id="hero" className="flex flex-col pt-6 sm:pt-12 pb-16 sm:pb-24 w-full">
           {/* Architectural Badge Capsule */}
-          <div className="self-center mt-8 mb-6">
+          <div className="self-center mb-6">
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2a2a2c]/80 backdrop-blur-md border border-white/10 shadow-sm hover:border-white/20 transition-colors">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               <span className="font-mono text-xs text-[#e5e1e4] tracking-wider uppercase">
-                USICT • GGSIPU • DELHI NCR
+                USICT • GGSIPU • DELHI
               </span>
               <span className="material-symbols-outlined text-[14px] text-[#8f9194]">north_east</span>
             </div>
@@ -747,12 +1034,6 @@ export default function App() {
                   experiences, and hackathons and projects are a big part of how I learn.
                 </p>
               </div>
-              <div className="about-text-glow group">
-                <p className="font-sans text-sm sm:text-base text-[#c5c7c9] leading-relaxed">
-                  I care more about understanding how things work under the hood than simply getting
-                  something to work with AI.
-                </p>
-              </div>
 
               {/* Tag Badges */}
               <div className="flex flex-wrap gap-2 mt-2">
@@ -766,7 +1047,7 @@ export default function App() {
                   First Year
                 </span>
                 <span className="px-3 py-1 rounded-full bg-[#2a2a2c] font-mono text-xs text-[#e5e1e4] border border-white/[0.06]">
-                  Delhi NCR, India
+                  Delhi, India
                 </span>
               </div>
             </div>
@@ -1116,10 +1397,10 @@ export default function App() {
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-white rounded-full" />
                   <span className="font-mono text-xs text-[#c5c7c9] uppercase tracking-widest">
-                    04 // CURRENT OBJECTIVE
+                    ROADMAP // 2026
                   </span>
                 </div>
-                <span className="font-mono text-xs text-[#8f9194]">2026 ROADMAP</span>
+                <span className="font-mono text-xs text-[#8f9194]">GROWTH OBJECTIVES</span>
               </div>
 
               <div className="flex flex-col p-6 rounded-2xl bg-[#1c1b1e] border border-white/[0.08] shadow-lg relative overflow-hidden">
@@ -1142,6 +1423,295 @@ export default function App() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================= */}
+        {/* SECTION 4: BEYOND TECHNOLOGY // LEADERSHIP & NON-TECH */}
+        {/* ======================================================= */}
+        <section id="beyond" className="flex flex-col pt-8 pb-16 sm:pb-24 w-full">
+          {/* Section Telemetry Bar */}
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
+              <span className="font-mono text-xs text-[#c5c7c9] uppercase tracking-widest">
+                04 // BEYOND TECHNOLOGY
+              </span>
+            </div>
+            <span className="font-mono text-xs text-[#8f9194] uppercase tracking-wider">
+              LEADERSHIP &amp; NON-TECHNICAL SKILLS
+            </span>
+          </div>
+
+          {/* Section Premise Hero Banner */}
+          <div className="flex flex-col p-6 sm:p-8 rounded-2xl bg-[#1c1b1e] border border-white/[0.08] shadow-xl relative overflow-hidden mb-10">
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+            
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/[0.06]">
+              <div className="max-w-[720px]">
+                <div className="flex items-center gap-2 mb-2.5">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/[0.06] font-mono text-[10px] text-white tracking-widest uppercase border border-white/10">
+                    NON-TECHNICAL PILLARS
+                  </span>
+                  <span className="text-[#8f9194] font-mono text-xs">•</span>
+                  <span className="font-mono text-xs text-[#8f9194] tracking-wider uppercase">
+                    COLLABORATION &amp; INITIATIVE
+                  </span>
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl text-white font-medium uppercase mb-3">
+                  PEOPLE, INITIATIVE &amp; EVENT EXECUTION
+                </h3>
+                <p className="font-sans text-sm sm:text-base text-[#c5c7c9] leading-relaxed">
+                  Software development is fundamentally a collaborative endeavor. Beyond writing code and experimenting with technical systems, I value the interpersonal, organizational, and leadership capabilities developed through genuine school governance and live event coordination.
+                </p>
+              </div>
+
+              {/* Quick Telemetry Indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 min-w-[260px]">
+                <div className="p-3 rounded-xl bg-[#0e0e10] border border-white/[0.05] flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center text-white shrink-0">
+                    <span className="material-symbols-outlined text-[18px]">military_tech</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-mono text-[10px] text-[#8f9194] tracking-wider">LEADERSHIP</span>
+                    <span className="font-sans text-xs text-white font-medium">Prefect &amp; House Captain</span>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-[#0e0e10] border border-white/[0.05] flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center text-white shrink-0">
+                    <span className="material-symbols-outlined text-[18px]">event_available</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-mono text-[10px] text-[#8f9194] tracking-wider">EVENT OPERATIONS</span>
+                    <span className="font-sans text-xs text-white font-medium">Annual Day &amp; Ceremonies</span>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-[#0e0e10] border border-white/[0.05] flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center text-white shrink-0">
+                    <span className="material-symbols-outlined text-[18px]">hub</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-mono text-[10px] text-[#8f9194] tracking-wider">SKILLS MATRIX</span>
+                    <span className="font-sans text-xs text-white font-medium">9 Interactive Competencies</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ========================================================= */}
+          {/* PART 1: PAST EXPERIENCE (GENUINE SCHOOL INVOLVEMENT) */}
+          {/* ========================================================= */}
+          <div className="mb-14">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+              <div>
+                <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[18px] text-emerald-400">history_edu</span>
+                  <span>Part 1 // Genuine Past Experience &amp; Leadership Foundation</span>
+                </span>
+                <p className="font-sans text-xs sm:text-sm text-[#8f9194] mt-1">
+                  Core student leadership appointments and institutional event execution that laid the groundwork for my organizational skills.
+                </p>
+              </div>
+              <span className="font-mono text-[11px] text-[#8f9194] shrink-0 self-start sm:self-auto bg-white/[0.04] px-3 py-1 rounded-full border border-white/[0.06]">
+                EXPERIENCE FOUNDATION
+              </span>
+            </div>
+
+            {/* 2 Clean, Spacious School Experience Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              {SCHOOL_EXPERIENCES.map((exp) => (
+                <div
+                  key={exp.id}
+                  className="p-7 sm:p-8 rounded-2xl bg-[#1c1b1e] border border-white/[0.08] shadow-lg flex flex-col justify-between relative overflow-hidden group"
+                >
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+                  <div>
+                    {/* Header */}
+                    <div className="flex items-center justify-between gap-2 mb-5 text-[11px] font-mono">
+                      <span className="text-[#8f9194] uppercase tracking-wider">
+                        {exp.category}
+                      </span>
+                      <span className="px-2.5 py-0.5 rounded-full bg-white/[0.06] text-emerald-400 border border-emerald-500/20 font-medium shrink-0">
+                        {exp.badge}
+                      </span>
+                    </div>
+
+                    {/* Icon + Title */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-white shrink-0 shadow-inner">
+                        <span className="material-symbols-outlined text-[24px] text-emerald-400">{exp.icon}</span>
+                      </div>
+                      <div>
+                        <h4 className="font-display text-xl sm:text-2xl text-white font-medium leading-tight mb-2">
+                          {exp.title}
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {exp.rolesOrEvents.map((role) => (
+                            <span
+                              key={role}
+                              className="px-2.5 py-0.5 rounded-full bg-[#0e0e10] border border-white/10 font-mono text-[11px] text-[#e5e1e4]"
+                            >
+                              {role}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Summary */}
+                    <p className="font-sans text-sm sm:text-base text-[#c5c7c9] leading-relaxed mb-6 font-light">
+                      {exp.summary}
+                    </p>
+
+                    {/* Key Responsibilities */}
+                    <div className="border-t border-white/[0.06] pt-4">
+                      <span className="font-mono text-[10px] text-[#8f9194] uppercase tracking-wider block mb-3 font-semibold">
+                        Key Responsibilities &amp; Exposure:
+                      </span>
+                      <ul className="space-y-2.5">
+                        {exp.responsibilities.map((resp, i) => (
+                          <li key={i} className="flex gap-2.5 font-sans text-xs sm:text-sm text-[#e5e1e4] leading-relaxed">
+                            <span className="text-emerald-400 font-mono select-none text-[12px] mt-0.5">▹</span>
+                            <span>{resp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ========================================================= */}
+          {/* PART 2: NON-TECHNICAL SKILLS MATRIX (INTERACTIVE POPUP) */}
+          {/* ========================================================= */}
+          <div className="flex flex-col p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#1c1b1e] border border-white/[0.08] shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent" />
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-white/[0.06]">
+              <div>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono text-[10px] tracking-wider uppercase font-medium">
+                    INTERACTIVE MATRIX
+                  </span>
+                  <span className="text-white/20">•</span>
+                  <span className="font-mono text-xs text-[#8f9194] uppercase tracking-wider">
+                    CLICK ANY SKILL FOR COMPLETE DETAILS
+                  </span>
+                </div>
+                <h4 className="font-display text-2xl sm:text-3xl text-white font-medium">
+                  Part 2 // Non-Technical Skills Matrix
+                </h4>
+                <p className="font-sans text-xs sm:text-sm text-[#c5c7c9] mt-1 max-w-[700px] leading-relaxed">
+                  Click any skill card to open its dedicated breakdown—explaining the competency, how it was demonstrated through genuine school leadership and event management, and its practical engineering application.
+                </p>
+              </div>
+
+              {/* Category Filter Pills */}
+              <div className="flex flex-wrap items-center gap-1.5 bg-[#0e0e10] p-1 rounded-full border border-white/[0.06] self-start lg:self-auto font-mono text-[11px]">
+                {['all', 'Leadership', 'Execution', 'People', 'Communication'].map((cat) => (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setSelectedSkillCategory(cat)}
+                    className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
+                      selectedSkillCategory === cat
+                        ? 'bg-white text-black font-semibold shadow'
+                        : 'text-[#8f9194] hover:text-white'
+                    }`}
+                  >
+                    {cat === 'all' ? 'All (9)' : cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* 9 Large, Prominent Skill Cards in Balanced Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 pt-7">
+              {NON_TECH_SKILLS.filter(
+                (skill) => selectedSkillCategory === 'all' || skill.category === selectedSkillCategory
+              ).map((skill) => (
+                <div
+                  key={skill.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setSelectedSkillModal(skill)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedSkillModal(skill);
+                    }
+                  }}
+                  className="p-6 sm:p-7 rounded-2xl bg-[#0e0e10] border border-white/[0.07] hover:border-emerald-500/40 hover:bg-[#141316] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_36px_rgba(0,0,0,0.7),0_0_20px_rgba(16,185,129,0.06)] cursor-pointer flex flex-col justify-between group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-emerald-400/50 transition-colors" />
+
+                  <div>
+                    {/* Header: Icon & Category */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-white group-hover:scale-105 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 group-hover:border-emerald-500/30 transition-all shadow-inner">
+                        <span className="material-symbols-outlined text-[24px]">{skill.icon}</span>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full bg-[#1c1b1e] font-mono text-[10px] text-[#8f9194] group-hover:text-emerald-300 group-hover:border-emerald-500/30 tracking-wider uppercase border border-white/[0.06] font-medium transition-colors">
+                        {skill.category}
+                      </span>
+                    </div>
+
+                    {/* Skill Title */}
+                    <h5 className="font-display text-xl sm:text-2xl text-white font-medium mb-2.5 group-hover:text-emerald-300 transition-colors leading-snug">
+                      {skill.name}
+                    </h5>
+
+                    {/* Summary */}
+                    <p className="font-sans text-xs sm:text-sm text-[#c5c7c9] leading-relaxed mb-5 font-light">
+                      {skill.summary}
+                    </p>
+                  </div>
+
+                  <div>
+                    {/* Experience Anchor Tag */}
+                    <div className="p-2.5 rounded-lg bg-[#18181b] border border-white/[0.05] text-[11px] font-mono text-[#8f9194] flex items-center gap-2 mb-4">
+                      <span className="material-symbols-outlined text-[15px] text-emerald-400 shrink-0">history_edu</span>
+                      <span className="truncate text-white/80">{skill.foundation}</span>
+                    </div>
+
+                    {/* Interactive CTA */}
+                    <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-white group-hover:text-emerald-300 transition-colors">
+                      <span className="flex items-center gap-1.5 font-semibold tracking-wider uppercase text-[11px]">
+                        <span>Explore Skill &amp; Experience</span>
+                        <span className="material-symbols-outlined text-[15px] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">
+                          open_in_new
+                        </span>
+                      </span>
+                      <span className="text-[10px] text-[#8f9194] font-normal uppercase tracking-widest hidden sm:inline">
+                        POPUP DETAILS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Collaborative Philosophy Callout */}
+            <div className="mt-10 p-5 rounded-xl bg-[#0e0e10]/90 border border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-[24px] text-emerald-400 shrink-0">psychology_alt</span>
+                <span className="font-sans text-xs sm:text-sm text-[#c5c7c9] leading-relaxed">
+                  <strong className="text-white font-medium">Interpersonal Reliability:</strong> Striving to be the team member who not only writes clean code, but communicates clearly, coordinates seamlessly, and follows through on every commitment.
+                </span>
+              </div>
+              <a
+                href="#contact"
+                className="shrink-0 px-5 py-2.5 rounded-full bg-white text-black hover:bg-[#eaeaea] font-mono text-xs tracking-wider uppercase font-semibold transition-all text-center shadow"
+              >
+                Let's Connect
+              </a>
             </div>
           </div>
         </section>
@@ -1180,7 +1750,9 @@ export default function App() {
 
             {/* Direct Email link alternative */}
             <a
-              href={`mailto:${CONTACT.email}`}
+              href={directMailHref}
+              target={isDesktop ? '_blank' : undefined}
+              rel={isDesktop ? 'noopener noreferrer' : undefined}
               className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-full bg-[#1c1b1e] text-[#e5e1e4] font-mono text-xs tracking-wider uppercase border border-white/10 hover:border-white/20 hover:bg-[#252427] transition-all"
             >
               <span>Direct Mail</span>
@@ -1449,6 +2021,143 @@ export default function App() {
       )}
 
       {/* ========================================================= */}
+      {/* NON-TECHNICAL SKILL INTERACTIVE MODAL */}
+      {/* ========================================================= */}
+      {selectedSkillModal && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+        >
+          {/* Backdrop with blur & click outside to close */}
+          <div
+            className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
+            onClick={() => setSelectedSkillModal(null)}
+          />
+
+          {/* Modal Panel: large, centered, scrollable on smaller screens */}
+          <div className="relative w-full max-w-[760px] max-h-[88vh] overflow-y-auto bg-[#18181b] border border-white/15 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-[0_24px_70px_rgba(0,0,0,0.85),0_0_30px_rgba(255,255,255,0.05)] z-10 animate-in fade-in zoom-in-95 duration-200">
+            {/* Top Bar with Category, Badge & Close Button */}
+            <div className="flex items-center justify-between gap-4 pb-4 mb-6 border-b border-white/10">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono text-[11px] font-medium uppercase tracking-wider">
+                  {selectedSkillModal.category}
+                </span>
+                <span className="text-white/20 select-none">•</span>
+                <span className="font-mono text-xs text-[#8f9194] uppercase tracking-wider">
+                  NON-TECHNICAL COMPETENCY
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedSkillModal(null)}
+                aria-label="Close modal"
+                className="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-white hover:text-black flex items-center justify-center text-white/80 hover:text-black transition-all shrink-0 cursor-pointer"
+              >
+                <span className="material-symbols-outlined text-[20px]">close</span>
+              </button>
+            </div>
+
+            {/* Header: Icon, Title, Foundation Tag */}
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-white shrink-0 shadow-inner">
+                <span className="material-symbols-outlined text-[30px] text-emerald-400">
+                  {selectedSkillModal.icon}
+                </span>
+              </div>
+              <div>
+                <h3 className="font-display text-2xl sm:text-3xl text-white font-medium tracking-tight mb-1.5">
+                  {selectedSkillModal.name}
+                </h3>
+                <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-[#c2c6d3]">
+                  <span className="text-emerald-400 font-medium">Developed through:</span>
+                  <span className="text-white/90">{selectedSkillModal.foundation}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 1: Meaningful explanation of what the skill involves */}
+            <div className="p-4 sm:p-5 rounded-xl bg-[#0e0e10] border border-white/[0.08] mb-6 shadow-inner">
+              <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest block font-semibold mb-1.5">
+                WHAT THIS SKILL INVOLVES
+              </span>
+              <p className="font-sans text-sm sm:text-base text-[#e5e1e4] leading-relaxed">
+                {selectedSkillModal.whatItInvolves}
+              </p>
+            </div>
+
+            {/* Section 2: How I developed/demonstrated this through actual past experiences */}
+            <div className="mb-6">
+              <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold block mb-2.5 flex items-center gap-2">
+                <span className="material-symbols-outlined text-[16px] text-emerald-400">history_edu</span>
+                <span>How I Developed This Through School Leadership &amp; Events</span>
+              </span>
+              <p className="font-sans text-sm sm:text-base text-[#c5c7c9] leading-relaxed font-light">
+                {selectedSkillModal.howDeveloped}
+              </p>
+            </div>
+
+            {/* Section 3: Relevant examples from school leadership & event management */}
+            <div className="mb-6">
+              <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold block mb-3 flex items-center gap-2">
+                <span className="material-symbols-outlined text-[16px] text-emerald-400">task_alt</span>
+                <span>Relevant School Examples &amp; Responsibilities</span>
+              </span>
+              <div className="space-y-2.5">
+                {selectedSkillModal.examples.map((ex, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3.5 rounded-xl bg-[#0e0e10] border border-white/[0.06] flex items-start gap-3"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-white/[0.08] text-emerald-400 font-mono text-xs flex items-center justify-center shrink-0 mt-0.5 select-none font-medium">
+                      {idx + 1}
+                    </span>
+                    <p className="font-sans text-xs sm:text-sm text-[#e5e1e4] leading-relaxed">
+                      {ex}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Section 4: Practical Applications in Engineering & Teamwork */}
+            <div className="mb-8">
+              <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold block mb-3 flex items-center gap-2">
+                <span className="material-symbols-outlined text-[16px] text-emerald-400">hub</span>
+                <span>Practical Application in Engineering &amp; Collaborative Projects</span>
+              </span>
+              <div className="space-y-2">
+                {selectedSkillModal.practicalApplications.map((app, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 rounded-xl bg-gradient-to-r from-[#1c1b1e] to-[#121214] border border-emerald-500/20 flex items-start gap-2.5"
+                  >
+                    <span className="material-symbols-outlined text-emerald-400 text-[17px] shrink-0 mt-0.5">
+                      check_circle
+                    </span>
+                    <p className="font-sans text-xs sm:text-sm text-[#e5e1e4] leading-relaxed">
+                      {app}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Close Button */}
+            <div className="pt-4 border-t border-white/10 flex items-center justify-end">
+              <button
+                type="button"
+                onClick={() => setSelectedSkillModal(null)}
+                className="py-3 px-6 rounded-full bg-white text-black font-mono text-xs tracking-wider uppercase font-semibold hover:bg-[#eaeaea] transition-all cursor-pointer"
+              >
+                Close Skill Details
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================= */}
       {/* MOBILE BOTTOM NAVIGATION BAR */}
       {/* ========================================================= */}
       <nav className="lg:hidden fixed bottom-0 w-full z-40 bg-[#0e0e10]/90 backdrop-blur-xl border-t border-white/[0.08] shadow-[0_-4px_24px_rgba(0,0,0,0.6)]">
@@ -1485,22 +2194,32 @@ export default function App() {
 
           <a
             href="#skills"
-            className={`flex flex-col items-center justify-center min-w-[48px] py-1 transition-colors ${
+            className={`flex flex-col items-center justify-center min-w-[44px] py-1 transition-colors ${
               activeSection === 'skills' ? 'text-white font-semibold' : 'text-[#8f9194] hover:text-[#e5e1e4]'
             }`}
           >
-            <span className="material-symbols-outlined text-[20px]">deployed_code</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider mt-0.5">Skills</span>
+            <span className="material-symbols-outlined text-[19px]">deployed_code</span>
+            <span className="font-mono text-[9px] uppercase tracking-wider mt-0.5">Skills</span>
+          </a>
+
+          <a
+            href="#beyond"
+            className={`flex flex-col items-center justify-center min-w-[44px] py-1 transition-colors ${
+              activeSection === 'beyond' ? 'text-white font-semibold' : 'text-[#8f9194] hover:text-[#e5e1e4]'
+            }`}
+          >
+            <span className="material-symbols-outlined text-[19px]">groups</span>
+            <span className="font-mono text-[9px] uppercase tracking-wider mt-0.5">Beyond</span>
           </a>
 
           <a
             href="#contact"
-            className={`flex flex-col items-center justify-center min-w-[48px] py-1 transition-colors ${
+            className={`flex flex-col items-center justify-center min-w-[44px] py-1 transition-colors ${
               activeSection === 'contact' ? 'text-white font-semibold' : 'text-[#8f9194] hover:text-[#e5e1e4]'
             }`}
           >
-            <span className="material-symbols-outlined text-[20px]">alternate_email</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider mt-0.5">Contact</span>
+            <span className="material-symbols-outlined text-[19px]">alternate_email</span>
+            <span className="font-mono text-[9px] uppercase tracking-wider mt-0.5">Contact</span>
           </a>
         </div>
       </nav>
